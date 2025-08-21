@@ -9,11 +9,10 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConexionBD {
-    private static final String URL = "jdbc:mysql://localhost:3306/tu_basedatos?useSSL=false&serverTimezone=UTC";
-    private static final String USER = "root";   // tu usuario MySQL
-    private static final String PASSWORD = "tu_contraseña"; // tu contraseña MySQL
+    private static final String URL = "jdbc:mysql://localhost:3306/ventas?zeroDateTimeBehavior=CONVERT_TO_NULL";
+    private static final String USER = "root";   //
+    private static final String PASSWORD = "root"; // 
 
     public static Connection getConnection() throws SQLException {
         return DriverManager.getConnection(URL, USER, PASSWORD);
     }
-}
